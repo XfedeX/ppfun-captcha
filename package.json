@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steambap/svg-captcha.git"
+    "url": "git+https://github.com/pixelplanetdev/ppfun-captcha"
   },
   "keywords": [
     "captcha",
@@ -27,9 +27,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steambap/svg-captcha/issues"
+    "url": "https://github.com/pixelplanetdev/ppfun-captcha/issues"
   },
-  "homepage": "https://github.com/steambap/svg-captcha#readme",
+  "homepage": "https://github.com/pixelplanetdev/ppfun-captcha",
   "dependencies": {
     "opentype.js": "^0.7.3"
   },
