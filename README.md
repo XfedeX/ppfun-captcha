@@ -1,8 +1,8 @@
 # ppfun-captcha
 
-[![NPM Version](https://img.shields.io/npm/v/svg-captcha.svg?style=flat-square)](https://www.npmjs.com/package/svg-captcha)
+[![NPM Version](https://img.shields.io/npm/v/ppfun-captcha.svg?style=flat-square)](https://www.npmjs.com/package/ppfun-captcha)
 
-> generate single-path svg captcha in node.js
+Generate single-path svg captcha in node.js
 
 ## sample image
 
@@ -28,7 +28,7 @@ If you want the original svg-capcha, check out [svg-captcha-fixed](https://www.n
 ## install
 
 ```
-npm install --save ppfun-captcha
+npm install ppfun-captcha
 ```
 
 ## usage
