@@ -1,7 +1,7 @@
 {
-  "name": "svg-captcha",
-  "version": "1.4.0",
-  "description": "generate svg captcha in node.js or express.js",
+  "name": "ppfun-captcha",
+  "version": "1.6.0",
+  "description": "Generate single-path svg captcha in node.js or express.js",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -19,8 +19,8 @@
     "captcha alternative"
   ],
   "author": {
-    "name": "Weilin Shi",
-    "email": "934587911@qq.com"
+    "name": "ppfun",
+    "email": "pixelplanetdev@gmail.com"
   },
   "engines": {
     "node": ">=4.x"

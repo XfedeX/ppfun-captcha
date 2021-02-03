@@ -1,3 +1,14 @@
+1.6.0 / 2021-02-03
+==================
+
+* Merge character paths together
+* Join them with a randomly generated path
+
+1.5.0 / 2020-03-23
+==================
+
+* Fixed [#45](https://github.com/produck/svg-captcha/issues/45)
+
 1.4.0 / 2019-05-03
 ===================
 

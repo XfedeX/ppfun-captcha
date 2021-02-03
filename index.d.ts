@@ -23,12 +23,16 @@ declare class ConfigObject {
 	 * random character preset
 	 */
 	charPreset?: string;
-	/**
-	 * default: false
-	 * if false, captcha will be black and white
-	 * otherwise, it will be randomly colorized
-	 */
-	color?: boolean;
+  /**
+   * default: 'black'
+   * Stroke Style of svg path, can be color or none
+   */
+  stroke?: string;
+  /**
+   * default: 'none'
+   * Fill Style of svg path, can be color or none
+   */
+  fill?: string;
 	/**
 	 * default: false
 	 * if set to true, it will draw with light grey color

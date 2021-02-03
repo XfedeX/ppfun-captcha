@@ -1,17 +1,26 @@
-![svg-captcha](media/header.png)
-
-<div align="center">
+# ppfun-captcha
 
 [![Build Status](https://img.shields.io/travis/lemonce/svg-captcha/master.svg?style=flat-square)](https://travis-ci.org/lemonce/svg-captcha)
 [![NPM Version](https://img.shields.io/npm/v/svg-captcha.svg?style=flat-square)](https://www.npmjs.com/package/svg-captcha)
 [![NPM Downloads](https://img.shields.io/npm/dm/svg-captcha.svg?style=flat-square)](https://www.npmjs.com/package/svg-captcha)
 
-</div>
+> generate single-path svg captcha in node.js
 
-> generate svg captcha in node.js
+## sample image
 
-## Translations
-[中文](README_CN.md)
+default captcha image:
+
+![image](media/example.png)
+
+with using fill instead of stroke:
+
+![image2](media/example-2.png)
+
+## Origin
+
+Credits go to the original author [produck](https://github.com/produck).
+This is a fork with added features and fixes for [svg-captcha](https://github.com/produck/svg-captcha) which didn't merge important [Bugfixes](https://github.com/produck/svg-captcha/pull/47) and is at the current published state [cracked](https://github.com/produck/svg-captcha/issues/45).
+If you want the original svg-capcha, check out [svg-captcha-fixed](https://www.npmjs.com/package/svg-captcha-fixed).
 
 ## useful if you
 
@@ -19,19 +28,23 @@
 - have issue with install c++ addon
 
 ## install
+
 ```
-npm install --save svg-captcha
+npm install --save ppfun-captcha
 ```
 
 ## usage
+
 ```Javascript
-var svgCaptcha = require('svg-captcha');
+var svgCaptcha = require('ppfun-captcha');
 
 var captcha = svgCaptcha.create();
 console.log(captcha);
 // {data: '<svg.../svg>', text: 'abcd'}
 ```
+
 with express
+
 ```Javascript
 var svgCaptcha = require('svg-captcha');
 
@@ -51,8 +64,9 @@ If no option is passed, you will get a random string of four characters and corr
   
 * `size`: 4 // size of random string  
 * `ignoreChars`: '0o1i' // filter out some characters like 0o1i  
-* `color`: true // characters will have distinct colors instead of grey, true if background option is set  
 * `background`: '#cc9966' // background color of the svg image  
+* `stroke`: 'black' // style/color of the svg path stroke
+* `fill`: 'black' // style/color of the svg strokes fill  
 
 This function returns an object that has the following property:
 * `data`: string // svg path data
@@ -93,30 +107,24 @@ return a svg captcha based on text provided.
 In pre 1.1.0 version you have to call these two functions,  
 now you can call create() to save some key strokes ;).
 
-## sample image
-default captcha image:
+## FAQ
 
-![image](media/example.png)
-
-math expression image with color options:
-
-![image2](media/example-2.png)
-
-## why use svg?
-
-It does not require any c++ addon.  
-The result image is smaller than jpeg image.
-
-> This has to be a joke. /\<text.+\>;.+\<\/text\>/g.test...
+### This has to be a joke. /\<text.+\>;.+\<\/text\>/g.test...
 
 svg captcha uses opentype.js underneath, which means that there is no
 '&lt;text&gt;1234&lt;/text&gt;'.  
 You get
 '&lt;path fill="#444" d="M104.83 19.74L107.85 19.74L112 33.56L116.13 19.74L119.15 19.74L113.48 36.85...'  
 instead.  
-  
-Even though you can write a program that convert svg to png, svg captcha has done its job  
-—— make captcha recognition harder
 
+### Why no noise line option?
+
+Noise lines can be easily filtered by path length and we decided to rather join characters with random paths, in order to to make the whole svg one single continuous path, which has the same purpose.
+
+### Why no colors?
+
+Colors don't add any security and can be easily changed to black & white anyway. The color of the stroke and fill can be manually choosen if it is neccessary for custom styles.
+  
 ## License
+
 [MIT](LICENSE.md)
