@@ -66,6 +66,17 @@ If no option is passed, you will get a random string of four characters and corr
 * `stroke`: 'black' // style/color of the svg path stroke
 * `fill`: 'black' // style/color of the svg strokes fill  
 
+Options that change the variation of the path:
+
+* `nodeDeviation: 0.1
+* `truncateLineProbability`: 0.5 
+* `truncateCurveProbability`: 0.5
+* `truncateCurvePositionMin`: 0.4
+* `truncateCurvePositionMax`: 0.6
+* `connectionPathDeviation` : 10.0
+
+(when using fill, set connectionPathDeviation far lower as it covers parts of the paths and is harder for humans to read - and consider converting it [to PNG](https://morioh.com/p/2a17965187b6) before serving, to stop bots from being able to read those obstructed paths)
+
 This function returns an object that has the following property:
 * `data`: string // svg path data
 * `text`: string // captcha text

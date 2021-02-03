@@ -66,6 +66,36 @@ declare class ConfigObject {
 	 * max value of the math expression
 	 */
 	mathMax?: number;
+  /**
+   * default: 0.5
+   * changing line probabilities
+   */
+  truncateLineProbability?: number;
+  /**
+   * default: 0.5
+   * changing line probabilities
+   */
+  truncateCurveProbability?: number;
+  /**
+   * default: 0.4
+   * changing line probabilities
+   */
+  truncateCurvePositionMin?: number;
+  /**
+   * default: 0.6
+   * changing line probabilities
+   */
+  truncateCurvePositionMax?: number;
+  /**
+   * default: 10.0
+   * changing line probabilities
+   */
+  connectionPathDeviation?: number;
+  /**
+   * default: 0.2
+   * changing line probabilities
+   */
+  nodeDeviation?: number;
 }
 /**
  * result of captcha generation
