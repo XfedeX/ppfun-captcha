@@ -51,7 +51,6 @@ If no option is passed, you will get a random string of four characters and corr
   
 * `size`: 4 // size of random string  
 * `ignoreChars`: '0o1i' // filter out some characters like 0o1i  
-* `noise`: 1 // number of noise lines  
 * `color`: true // characters will have distinct colors instead of grey, true if background option is set  
 * `background`: '#cc9966' // background color of the svg image  
 
@@ -80,7 +79,7 @@ See the following api.
 Gain access to global setting object. 
 It is used for create and createMathExpr api as the default options.  
   
-In addition to size, noise, color, and background, you can also set the following property:
+In addition to size, color, and background, you can also set the following property:
 * `width`: number // width of captcha
 * `height`: number // height of captcha
 * `fontSize`: number // captcha text size

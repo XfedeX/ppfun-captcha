@@ -51,7 +51,6 @@ app.get('/captcha', function (req, res) {
   
 * `size`: 4 // 验证码长度  
 * `ignoreChars`: '0o1i' // 验证码字符中排除 0o1i  
-* `noise`: 1 // 干扰线条的数量  
 * `color`: true // 验证码的字符是否有颜色，默认没有，如果设定了背景，则默认有  
 * `background`: '#cc9966' // 验证码图片背景颜色  
 
@@ -74,7 +73,7 @@ text 属性上是算数式的结果。不过用法和之前是完全一样的。
 这是全局配置对象。 
 create和createMathExpr接口的默认配置就是使用的这个对象。  
   
-除了 size, noise, color, 和 background 之外，你还可以修改以下属性：
+除了 size, color, 和 background 之外，你还可以修改以下属性：
 * `width`: number // width of captcha
 * `height`: number // height of captcha
 * `fontSize`: number // captcha text size

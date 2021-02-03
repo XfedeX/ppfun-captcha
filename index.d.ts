@@ -42,11 +42,6 @@ declare class ConfigObject {
 	 */
 	ignoreChars?: string;
 	/**
-	 * default: 1
-	 * number of noise lines
-	 */
-	noise?: number;
-	/**
 	 * default: white
 	 * background color of svg image
 	 */
