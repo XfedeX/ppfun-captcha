@@ -14,9 +14,10 @@ with using fill instead of stroke:
 
 ![image2](media/example-2.png)
 
-galary of generated captchas (bulk converted to png to display)
+galary of generated captchas (bulk converted to png to display):
 
 ![image3](media/example-3.png)
+![image4](media/example-4.png)
 
 ## Origin
 
