@@ -1,6 +1,6 @@
 {
   "name": "ppfun-captcha",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Generate single-path svg captcha in node.js or express.js",
   "main": "index.js",
   "scripts": {

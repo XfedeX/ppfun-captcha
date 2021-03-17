@@ -70,6 +70,7 @@ If no option is passed, you will get a random string of four characters and corr
 * `background`: '#cc9966' // background color of the svg image  
 * `stroke`: 'black' // style/color of the svg path stroke
 * `fill`: 'black' // style/color of the svg strokes fill  
+*  style: '' // svg path style attribute, i.e.: 'stroke-width: 4;'
 
 Options that change the variation of the path:
 
