@@ -63,7 +63,7 @@ app.get('/captcha', function (req, res) {
 ## API
 
 #### `svgCaptcha.create(options)`  
-If no option is passed, you will get a random string of four characters and corresponding svg.  
+Get a random string of four characters and corresponding svg captcha.
   
 * `size`: 4 // size of random string  
 * `ignoreChars`: '0o1i' // filter out some characters like 0o1i  
@@ -71,6 +71,7 @@ If no option is passed, you will get a random string of four characters and corr
 * `stroke`: 'black' // style/color of the svg path stroke
 * `fill`: 'black' // style/color of the svg strokes fill  
 *  style: '' // svg path style attribute, i.e.: 'stroke-width: 4;'
+* `font`: Font object (see svgCaptcha.loadFont) or Array of multiple Font objects
 
 Options that change the variation of the path:
 
@@ -97,12 +98,17 @@ This function returns an object that has the following property:
 * `data`: string // svg of the math expression
 * `text`: string // the answer of the math expression
 
+#### `svgCaptcha.createCaptcha(text, options)`
+return a svg captcha based on text provided.  
+Options same as create.
+Returns svg string.
+
 #### `svgCaptcha.loadFont(url)`
-Load your own font and override the default font.
+Load your own font.
 * `url`: string // path to your font
-This api is a wrapper around loadFont api of opentype.js.  
+Returns a Font object which you can use in options.
+(this api is a wrapper around loadFont api of opentype.js)
 Your may need experiment around various options to make your own font accessible.  
-See the following api.
 
 #### `svgCaptcha.options`
 Gain access to global setting object. 
@@ -113,11 +119,6 @@ In addition to size, color, and background, you can also set the following prope
 * `height`: number // height of captcha
 * `fontSize`: number // captcha text size
 * `charPreset`: string // random character preset
-
-#### `svgCaptcha.randomText([size|options])`  
-return a random string.
-#### `svgCaptcha(text, options)`
-return a svg captcha based on text provided.  
 
 In pre 1.1.0 version you have to call these two functions,  
 now you can call create() to save some key strokes ;).
